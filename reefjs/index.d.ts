@@ -87,10 +87,6 @@ declare class Reef {
 }
 
 declare namespace Reef {
-    /**
-     * Types not provided yet.
-     */
-    type Router = any;
 
     interface Options {
         /**
@@ -161,13 +157,96 @@ declare namespace Reef {
         do(name: string, ...args: any[]): void;
 
         /**
-         *  Getter function to retrieve data.
-         *
-         * @param name - Name of getter.
-         *
-         * {@link https://reefjs.com/advanced/#getters}
-         *
-         */
+        *  Getter function to retrieve data.
+        *
+        * @param name - Name of getter.
+        *
+        * {@link https://reefjs.com/advanced/#getters}
+        *
+        */
         get(name: string): any;
+
+    }
+
+    interface Route { 
+        title: string, 
+        url: string,
+        redirect?: string | ((route: Route) => string),
+        params?: any
+        search?: any
+        [key: string]: any
+    }
+
+    class Router {
+        
+        /**
+        * Creates a new Route. Route object requires a title and url. Additional properties can also be included. 
+        * 
+        * @param router - Object containing properties.
+        * 
+        * {@link https://reefjs.com/routing/#getting-started}
+        * 
+        */
+        constructor(router: {
+            
+            routes: Route
+
+            /**
+            * The root URL for your app, if using a subdirectory.
+            */
+            root: string, 
+
+            /**
+            * The pattern to use for the page title. Includes {{title}} that will be replaced with the actual title.
+            */
+            title: string, 
+
+            /**
+            * If true, uses a hashbang (#!) pattern instead of true URL paths
+            */
+            useHash: boolean
+    
+        });
+
+        /**
+        * Add routes to an existing route.
+        * 
+        * @param route - Routes or an individual route object.
+        * 
+        * {@link https://reefjs.com/routing/#addroutes}
+        * 
+        */
+        addRoutes(route: Route | Route[]): void;
+
+        /**
+        * Programmatically navigate to a URL.
+        * 
+        * {@link https://reefjs.com/routing/#navigate}
+        * 
+        * @param url - URL.
+        * 
+        */
+        navigate(url: string): void;
+
+        /**
+        * Associate a component with the router for automatic rendering.
+        * 
+        * {@link https://reefjs.com/routing/#addcomponent}
+        * 
+        * @param component - Reef component. 
+        * 
+        */
+        addComponent(component: Reef): void;
+
+        /**
+         * Get the current route details
+         *
+         * {@link https://reefjs.com/routing/#current} 
+         *
+         * @returns - Route.
+         * 
+         */
+        current(): Route;
+
     }
 }
