@@ -84,6 +84,7 @@ declare class Reef {
      * {@link https://reefjs.com/advanced/#debugging}
      */
     static debug(state: boolean): void;
+
 }
 
 declare namespace Reef {
@@ -107,7 +108,7 @@ declare namespace Reef {
          */
         template:
             | string
-            | ((props: Record<string, any>, elemOrRouter?: Element | Router, elem?: Element) => string);
+            | ((props: Record<string, any>, elemOrRouter?: any, elem?: Element) => string);
 
         /**
          * Prevents Cross-Site Scripting (XSS) Attacks. You can disable this feature by setting this option to true.
@@ -189,22 +190,22 @@ declare namespace Reef {
         */
         constructor(router: {
             
-            routes: Route
+            routes: Route[]
 
             /**
             * The root URL for your app, if using a subdirectory.
             */
-            root: string, 
+            root?: string, 
 
             /**
             * The pattern to use for the page title. Includes {{title}} that will be replaced with the actual title.
             */
-            title: string, 
+            title?: string, 
 
             /**
             * If true, uses a hashbang (#!) pattern instead of true URL paths
             */
-            useHash: boolean
+            useHash?: boolean
     
         });
 

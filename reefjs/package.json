@@ -1,0 +1,58 @@
+{
+  "_from": "@types/reefjs",
+  "_id": "@types/reefjs@7.6.0",
+  "_inBundle": false,
+  "_integrity": "sha512-Rer1aXCmDoDPDz5GoSi+dCV+BZIObfMKHxzbJ83pLvNs/E7IDglL7f/qn/o1kQDqx53EZ+zNJtH3EqVPqWkmLA==",
+  "_location": "/@types/reefjs",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@types/reefjs",
+    "name": "@types/reefjs",
+    "escapedName": "@types%2freefjs",
+    "scope": "@types",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@types/reefjs/-/reefjs-7.6.0.tgz",
+  "_shasum": "b9fb58b27e1b2a59956152937a842be8419a5f5a",
+  "_spec": "@types/reefjs",
+  "_where": "C:\\Users\\Davide\\Desktop\\reefjs-boilerplate",
+  "bugs": {
+    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "shockdevv",
+      "url": "https://github.com/shockdevv"
+    },
+    {
+      "name": "cferdinandi",
+      "url": "https://github.com/cferdinandi"
+    }
+  ],
+  "dependencies": {},
+  "deprecated": false,
+  "description": "TypeScript definitions for reefjs",
+  "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped#readme",
+  "license": "MIT",
+  "main": "",
+  "name": "@types/reefjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+    "directory": "types/reefjs"
+  },
+  "scripts": {},
+  "typeScriptVersion": "3.3",
+  "types": "index.d.ts",
+  "typesPublisherContentHash": "a5dec9856bc291941caa6355c9ab8a3e025fed5bb415e9d15c291c8736d61ad8",
+  "version": "7.6.0"
+}
